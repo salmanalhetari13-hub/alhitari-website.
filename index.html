@@ -1,0 +1,325 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الهتاري للتسويق الرقمي</title><!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Cairo', sans-serif;
+    }
+
+    body {
+        background: #0b0f1a;
+        color: #ffffff;
+        line-height: 1.6;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    /* Header */
+    header {
+        background: rgba(10, 15, 30, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 15px 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+        font-weight: 900;
+        color: #d4af37;
+        text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: #d4af37;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: linear-gradient(rgba(5, 10, 20, 0.85), rgba(5, 10, 20, 0.95)),
+                    url('logo.jpg');
+        background-size: cover;
+        background-position: center;
+        padding-top: 80px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        color: #d4af37;
+        text-shadow: 0 0 20px rgba(212, 175, 55, 0.9);
+    }
+
+    .hero p {
+        margin: 20px 0;
+        font-size: 1.2rem;
+        color: #dddddd;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background: linear-gradient(45deg, #d4af37, #f5e6a8);
+        color: #000;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+        box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
+    }
+
+    .btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(212, 175, 55, 1);
+    }
+
+    section {
+        padding: 80px 0;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        color: #d4af37;
+    }
+
+    /* Services */
+    .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .service-box {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        transition: 0.3s;
+    }
+
+    .service-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.7);
+    }
+
+    /* About */
+    .about {
+        text-align: center;
+        max-width: 800px;
+        margin: auto;
+        color: #dddddd;
+    }
+
+    /* Contact */
+    .contact-info {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 1.1rem;
+        color: #ffffff;
+    }
+
+    .contact-info p {
+        margin: 10px 0;
+    }
+
+    .contact-info a {
+        color: #d4af37;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .contact form {
+        max-width: 600px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact input,
+    .contact textarea {
+        padding: 12px;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        background: #111827;
+        color: #fff;
+        border: 1px solid rgba(212, 175, 55, 0.4);
+    }
+
+    footer {
+        background: #020617;
+        text-align: center;
+        padding: 20px;
+        border-top: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    /* Animations */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 1s ease;
+    }
+
+    .fade-in.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 2.2rem;
+        }
+
+        nav ul {
+            display: none;
+        }
+    }
+</style>
+
+</head>
+<body><!-- Header -->
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">الهتاري</div>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="container fade-in">
+        <h1>الهتاري للتسويق الرقمي</h1>
+        <p>نقود نجاحك الرقمي نحو القمة بحلول تسويقية مبتكرة ونتائج قابلة للقياس.</p>
+        <a href="#contact" class="btn">ابدأ مشروعك الآن</a>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services">
+    <div class="container">
+        <h2>خدماتنا</h2>
+        <div class="services">
+            <div class="service-box fade-in">
+                <h3>إدارة وسائل التواصل الاجتماعي</h3>
+                <p>تعزيز حضورك الرقمي وزيادة التفاعل مع جمهورك.</p>
+            </div>
+            <div class="service-box fade-in">
+                <h3>تحسين محركات البحث (SEO)</h3>
+                <p>رفع ترتيب موقعك في نتائج البحث وزيادة الزيارات.</p>
+            </div>
+            <div class="service-box fade-in">
+                <h3>الإعلانات الممولة</h3>
+                <p>حملات إعلانية احترافية تحقق أعلى عائد استثماري.</p>
+            </div>
+            <div class="service-box fade-in">
+                <h3>تصميم وتطوير المواقع</h3>
+                <p>إنشاء مواقع حديثة متجاوبة تعكس هوية علامتك التجارية.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <div class="container">
+        <h2>من نحن</h2>
+        <p class="about fade-in">
+            الهتاري للتسويق الرقمي شركة متخصصة في تقديم حلول تسويقية مبتكرة تساعد
+            الشركات على تحقيق النجاح والنمو في العالم الرقمي من خلال استراتيجيات
+            متطورة ونتائج دقيقة قابلة للقياس.
+        </p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>تواصل معنا</h2>
+
+        <div class="contact-info fade-in">
+            <p>📞 رقم الهاتف: <a href="tel:+96778047922">+967 780 479 22</a></p>
+            <p>📧 البريد الإلكتروني: <a href="mailto:alhitaridigitalmarketing@gmail.com">alhitaridigitalmarketing@gmail.com</a></p>
+        </div>
+
+        <form class="fade-in">
+            <input type="text" placeholder="الاسم" required>
+            <input type="email" placeholder="البريد الإلكتروني" required>
+            <textarea rows="5" placeholder="رسالتك" required></textarea>
+            <button class="btn" type="submit">إرسال</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 الهتاري للتسويق الرقمي. جميع الحقوق محفوظة.</p>
+</footer>
+
+<!-- JavaScript for Animations -->
+<script>
+    const elements = document.querySelectorAll('.fade-in');
+
+    const revealOnScroll = () => {
+        elements.forEach(el => {
+            const elementTop = el.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (elementTop < windowHeight - 100) {
+                el.classList.add('show');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+</script>
+
+</body>
+</html>
